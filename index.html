@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre del Proyecto</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto">
+        <!-- Navbar -->
+        <nav class="bg-gray-800 p-4 text-white">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="#" class="text-xl font-bold">Nombre del Proyecto</a>
+                <div class="flex space-x-4">
+                    <a href="db/DB Conovatec.sql" class="hover:underline">Tabla SQL</a>
+                    <a href="docs/Datos en excel del formulario.xlsx" class="hover:underline">Excel</a>
+                    <a href="uml/DbConovatec.puml" class="hover:underline">Código del Diagrama</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contenido -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="card bg-white shadow-md rounded-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Tabla SQL</h2>
+                <p>La tabla SQL ha sido creada correctamente y contiene la estructura necesaria para almacenar los datos de usuarios y actividades.</p>
+            </div>
+
+            <div class="card bg-white shadow-md rounded-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Excel</h2>
+                <p>El archivo Excel ha sido generado con éxito y contiene la información necesaria para el proyecto.</p>
+                <a href="docs/Datos en excel del formulario.xlsx" class="text-blue-500 hover:underline">Descargar Excel</a>
+            </div>
+
+            <div class="card bg-white shadow-md rounded-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Código del Diagrama</h2>
+                <p>El código del diagrama ha sido creado y documentado correctamente.</p>
+                <pre class="bg-gray-200 p-4 rounded-md">[El codigo del diagrama lo puedes encontrar en la carpeta de uml]</pre>
+            </div>
+
+            <div class="card bg-white shadow-md rounded-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Diagrama</h2>
+                <p>El diagrama de la base de datos ha sido generado con éxito y muestra la relación entre las tablas "usuarios" y "actividad".</p>
+                <img src="ruta_al_diagrama.png" alt="Diagrama de la base de datos" class="w-full rounded-lg mt-4">
+            </div>
+        </div>
+        <div class="container mx-auto p-8">
+            <div class="card bg-white shadow-md rounded-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Actividad de Excel del Equipo de Backend</h2>
+                <div class="flex items-center justify-between mb-4">
+                    <p class="text-gray-600">Fecha de Entrega: 14 de febrero de 2024</p>
+                    <p class="text-gray-600">Reunión: No</p>
+                </div>
+                <p class="mb-4">El equipo de backend ha completado la actividad de Excel dentro del plazo establecido. Se han registrado 1 horas de trabajo para esta tarea.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

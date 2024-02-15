@@ -1,0 +1,54 @@
+@startuml diagrama
+
+skinparam handwritten true
+skinparam padding 20
+skinparam class {
+    BackgroundColor PaleGreen
+    BorderColor DarkGreen
+}
+skinparam stereotypeCBackgroundColor #FFAAAA
+skinparam stereotypeCBorderColor #AA0000
+
+entity "usuarios" as usuarios {
+    +id: INT [PK]
+    email: VARCHAR(255) [NOT NULL]
+    nombres: VARCHAR(255) [NOT NULL]
+    apellidos: VARCHAR(255) [NOT NULL]
+    equipo: ENUM('desarrollo de software', 'talento humano', 'marketing', 'analisis de datos', 'relaciones publicas') [NOT NULL]
+    rol_puesto: VARCHAR(255) [NOT NULL]
+    celular: VARCHAR(20) [NOT NULL]
+    pais: VARCHAR(255) [NOT NULL]
+    departamento: VARCHAR(255) [NOT NULL]
+    provincia: VARCHAR(255) [NOT NULL]
+    distrito: VARCHAR(255) [NOT NULL]
+    dni: VARCHAR(20) [NOT NULL]
+    facebook: VARCHAR(255)
+    linkedin: VARCHAR(255)
+    discord: VARCHAR(255)
+    fecha_nacimiento: DATE [NOT NULL]
+    universidad: VARCHAR(255)
+    pais_universidad: VARCHAR(255)
+    profesion_carrera: VARCHAR(255)
+    trabajando_actualmente: BOOLEAN [NOT NULL]
+    estudiando_actualmente: BOOLEAN [NOT NULL]
+    pasatiempo1: VARCHAR(255)
+    pasatiempo2: VARCHAR(255)
+    foto: VARCHAR(255)
+    portafolio_pdf: VARCHAR(255)
+    descripcion_comunidad: TEXT
+    descripcion_equipo: TEXT
+}
+
+entity "actividad" as actividad {
+    +id: INT [PK]
+    fecha_entrega: DATE [NOT NULL]
+    dni: VARCHAR(20) [NOT NULL]
+    reunion: ENUM('si', 'no') [NOT NULL]
+    tipo_actividad: ENUM('equipo', 'comunidad', 'consejo directivo') [NOT NULL]
+    nombre_actividad: VARCHAR(255) [NOT NULL]
+    minutos_realizacion: INT [NOT NULL]
+}
+
+usuarios ||--o{ actividad
+
+@enduml
